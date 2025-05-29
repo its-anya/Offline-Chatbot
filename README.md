@@ -76,7 +76,7 @@ Leave this running in one terminal window.
 If from GitHub:
 
 
-#git clone https://github.com/your-username/offline_chatbot.git
+#git clone https://github.com/shannu-afk/offline_chatbot.git
 
 cd offline_chatbot
 

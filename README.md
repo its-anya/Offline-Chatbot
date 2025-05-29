@@ -12,7 +12,9 @@ A fully offline, intelligent chatbot built using Flask, Ollama (LLaMA3), and HTM
 
 🧠 Run completely offline using a locally hosted LLM (via Ollama)
 
+
 🚀 Features
+
 
 🧠 Offline Chat	Uses a local LLM (llama3) running with Ollama to respond to queries.
 
@@ -24,7 +26,9 @@ A fully offline, intelligent chatbot built using Flask, Ollama (LLaMA3), and HTM
 
 🔐 Privacy	All processing is done locally. No internet or external APIs are required.
 
+
 📁 File Upload Supported Formats
+
 
 .pdf
 
@@ -34,7 +38,9 @@ A fully offline, intelligent chatbot built using Flask, Ollama (LLaMA3), and HTM
 
 ❌ Unsupported formats will result in an appropriate error message.
 
+
 🗣️ Voice Input
+
 
 Click the 🎙️ Voice button to start speaking.
 
@@ -42,7 +48,9 @@ Your browser will convert speech to text and send it to the bot.
 
 Ensure microphone permissions are enabled in the browser.
 
+
 📌 Dependencies
+
 
 Flask
 
@@ -58,7 +66,9 @@ Ollama (LLaMA3 model)
 
 Browser support for Web Speech API
 
+
 🙋‍♂️ Author
+
 
 Kodali Shanmukh Chowdary
 

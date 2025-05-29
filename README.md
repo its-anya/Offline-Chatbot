@@ -48,6 +48,45 @@ Your browser will convert speech to text and send it to the bot.
 
 Ensure microphone permissions are enabled in the browser.
 
+Steps to run the bot:
+
+✅ Step 1: Install Python (if not already installed)
+Download Python 3.10+ from https://www.python.org/downloads/
+
+Then verify:
+
+#python --version
+
+✅ Step 2: Install Ollama
+Ollama allows you to run LLMs like llama3 locally.
+
+🔗 Download Ollama
+
+After installation, open a terminal and run:
+
+
+#ollama run llama3
+
+This will download and run the LLaMA3 model. It runs at http://localhost:11434.
+
+Leave this running in one terminal window.
+
+✅ Step 3: Clone or Download the Bot Project
+
+If from GitHub:
+
+
+#git clone https://github.com/your-username/offline_chatbot.git
+
+cd offline_chatbot
+
+Or if you have it locally, just navigate into the folder.
+
+✅ Step 4: Install Python Dependencies
+
+
+#pip install -r requirements.txt
+
 
 📌 Dependencies:
 

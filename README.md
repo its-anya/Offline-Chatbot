@@ -1,118 +1,159 @@
 # Offline-Chatbot
 
-A fully offline, intelligent chatbot built using Flask, Ollama (LLaMA3), and HTML/CSS/JS. This chatbot mimics ChatGPT-like behavior with the added ability to:
+A fully offline, intelligent chatbot built using Flask, Ollama, and HTML/CSS/JS. This chatbot provides a ChatGPT-like experience completely offline with multiple model support.
 
-💬 Chat interactively (no API required)
+## 🚀 Key Features
 
-📁 Understand and respond to uploaded files (PDF, TXT, DOCX)
+- 💬 Interactive chat with multiple AI model support
+- 🤖 Support for any Ollama model (Mistral, Llama, CodeLlama, etc.)
+- 📁 File understanding (PDF, TXT support)
+- 🎙️ Voice input through browser
+- 🎨 Modern, responsive UI
+- 🔒 100% offline operation - no API keys needed
 
-🎙️ Take voice input through your browser
+## 📋 Detailed Features
 
-🧑‍🎨 Provide an attractive, modern UI
+### 🧠 Multi-Model Support
+- Choose from any installed Ollama model
+- Switch models during conversation
+- Refresh model list with one click
+- Automatic model detection
 
-🧠 Run completely offline using a locally hosted LLM (via Ollama)
+### 📁 File Upload Support
+- **Supported Formats:**
+  - PDF (.pdf)
+  - Text files (.txt)
+- **Features:**
+  - Automatic content extraction
+  - Context-aware responses about uploaded files
+  - Error handling for unsupported formats
+  - File content size optimization
 
+### 🎙️ Voice Input
+- Browser-based speech recognition
+- Real-time speech-to-text conversion
+- Automatic query submission
+- Multiple language support (browser-dependent)
 
-🚀 Features:
+### 💻 User Interface
+- Clean, modern design
+- Real-time response streaming
+- Mobile-responsive layout
+- Easy model switching
+- File upload progress indication
+- Clear message history
 
+## 🛠️ Installation Guide
 
-🧠 Offline Chat	Uses a local LLM (llama3) running with Ollama to respond to queries.
+### 1️⃣ Install Python
+1. Download Python 3.10 or newer from [python.org](https://www.python.org/downloads/)
+2. During installation:
+   - ✅ Check "Add Python to PATH"
+   - ✅ Check "Install pip"
+3. Verify installation:
+   ```bash
+   python --version
+   ```
 
-📁 File Upload	Upload .pdf, .txt, or .docx files and the bot reads the content.
+### 2️⃣ Install Ollama
+1. Download Ollama from [Ollama](https://ollama.com/download)
+2. Install and start Ollama
+3. Install at least one model:
+   ```bash
+   # Install Mistral (recommended starter model)
+   ollama pull mistral
 
-🎙️ Voice Input	Uses Web Speech API to take voice input via browser microphone.
+   # Optional: Install additional models
+   ollama pull llama2
+   ollama pull codellama
+   ```
 
-💻 Clean UI	Intuitive chat interface with proper formatting and scrollable history.
+### 3️⃣ Setup Project
+1. Clone or download the project:
+   ```bash
+   git clone https://github.com/shannu-afk/offline_chatbot.git
+   cd offline_chatbot
+   ```
 
-🔐 Privacy	All processing is done locally. No internet or external APIs are required.
+2. Install Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+### 4️⃣ Run the Chatbot
+1. Make sure Ollama is running in background
+2. Start the Flask server:
+   ```bash
+   python app.py
+   ```
+3. Open your browser and go to:
+   ```
+   http://127.0.0.1:5000
+   ```
 
-📁 File Upload Supported Formats:
+## 💡 Usage Guide
 
+### Chatting
+1. Select your preferred model from the dropdown
+2. Type your message and press Send
+3. Or click 🎤 for voice input
 
-.pdf
+### File Upload
+1. Click "Choose File" button
+2. Select a PDF or TXT file
+3. Wait for upload confirmation
+4. Reference the file in your chat
 
-.txt
+### Model Switching
+1. Use the model dropdown to see available models
+2. Click 🔄 to refresh the model list
+3. Select a different model anytime
+4. Each message will use the currently selected model
 
-.docx
+## 🔧 Troubleshooting
 
-❌ Unsupported formats will result in an appropriate error message.
+### Common Issues:
+1. **"Error communicating with model"**
+   - Ensure Ollama is running
+   - Check if selected model is installed
+   - Try refreshing the model list
 
+2. **"Speech recognition not supported"**
+   - Use a modern browser (Chrome recommended)
+   - Allow microphone permissions
 
-🗣️ Voice Input:
+3. **File Upload Issues**
+   - Check file format (PDF/TXT only)
+   - Ensure file isn't corrupted
+   - Try with a smaller file if too large
 
+## 📦 Dependencies
 
-Click the 🎙️ Voice button to start speaking.
+### Backend
+- Flask==3.0.2
+- requests==2.31.0
+- PyPDF2==3.0.1
 
-Your browser will convert speech to text and send it to the bot.
+### Frontend
+- Modern web browser with:
+  - JavaScript enabled
+  - Web Speech API support
+  - WebSocket support
 
-Ensure microphone permissions are enabled in the browser.
+### External
+- Ollama (with at least one model installed)
 
-Steps to run the bot:
+## 👤 Author
 
-✅ Step 1: Install Python (if not already installed)
-Download Python 3.10+ from https://www.python.org/downloads/
+**Kodali Shanmukh Chowdary**
+- 📧 Email: kodalishanmukh6thfinger@gmail.com
+- 🎓 B.Tech AI & ML
+- 🌍 Location: India
 
-Then verify:
+## 📄 License
 
-#python --version
+This project is open source and available under the MIT License.
 
-✅ Step 2: Install Ollama
-Ollama allows you to run LLMs like llama3 locally.
+## 🤝 Contributing
 
-🔗 Download Ollama
-
-After installation, open a terminal and run:
-
-
-#ollama run llama3
-
-This will download and run the LLaMA3 model. It runs at http://localhost:11434.
-
-Leave this running in one terminal window.
-
-✅ Step 3: Clone or Download the Bot Project
-
-If from GitHub:
-
-
-#git clone https://github.com/shannu-afk/offline_chatbot.git
-
-cd offline_chatbot
-
-Or if you have it locally, just navigate into the folder.
-
-✅ Step 4: Install Python Dependencies
-
-
-#pip install -r requirements.txt
-
-
-📌 Dependencies:
-
-
-Flask
-
-flask-cors
-
-requests
-
-PyPDF2
-
-python-docx
-
-Ollama (LLaMA3 model)
-
-Browser support for Web Speech API
-
-
-🙋‍♂️ Author:
-
-
-Kodali Shanmukh Chowdary
-
-📧 kodalishanmukh6thfinger@gmail.com
-
-🧠 B.Tech AI & ML
-
-🌐 India
+Contributions, issues, and feature requests are welcome!

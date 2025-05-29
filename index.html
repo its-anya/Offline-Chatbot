@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Chatbot</title>
+  <link rel="stylesheet" href="static/style.css">
+  <script src="static/script.js" defer></script>
+</head>
+<body>
+  <div id="chat">
+    <h2>🧠 Local Chatbot</h2>
+    <div id="messages"></div>
+    <input type="text" id="input" placeholder="Type your message...">
+    <button onclick="send()">Send</button>
+    <button onclick="startVoiceInput()">🎤 Speak</button>
+    <br><br>
+    <input type="file" id="fileInput" onchange="uploadFile()">
+  </div>
+
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; background: #f5f5f5; }
+    #chat { max-width: 600px; margin: auto; background: white; padding: 1rem; border-radius: 8px; }
+    .msg { margin: 1rem 0; }
+    .user { font-weight: bold; color: blue; }
+    .bot { color: green; }
+    button, input[type="file"] {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="text"] {
+      padding: 0.5rem;
+      width: 80%;
+    }
+  </style>
+</body>
+<footer>
+  <p style="text-align: center; font-size: 14px;">© 2025 Chatbot by Kodali Shanmukh Chowdary. All rights reserved.</p>
+</footer>
+
+</html>
